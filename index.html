@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人網站</title>
+<!-- google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">   
+</head>
+
+<body>
+    <header>
+        <audio controls autoplay>
+            <source src="music/Troye Sivan  Strawberries  Cigarettes Official Instrumental.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <span id="music-text">Strawberries＆Cigarettes by Troye Sivan</span>
+    </header>  
+
+    <section class="card1" id="section-1">
+        <img class="img1" src="image/self.jpg" >
+        <div class="big">Hieee我叫黃若庭</div>
+        <div class="small">2003.03.05<br>
+            中原大學資管系<br>
+            活潑 很很很很很很吵有講不完的話<br>
+            喜歡邊伯賢跟戳爺<br>
+        </div>       
+            <span class="small">還有唱歌</span>
+            <span class="mini">(雖然聽的人都說我在超渡他們...)</span>                     
+        <div class=small>夢想是活到100歲還是要很少女<br>
+            噢對了名言是Never Gonna Give You Up
+        </div>
+    </section>
+
+    <section class="card2" id="section-2">
+        <div class="big">專業技能</div>
+        <div class="small"><center>Java</center></div>      
+        <div class="array_item">
+            <progress id="file1" class="file" max="100" value="1"></progress>
+            <p id="schedule1" class="schedule">1%</p>
+        </div>
+
+        <div class="small"><center>Python</center></div>      
+        <div class="array_item">
+            <progress id="file2" class="file" max="100" value="1"></progress>
+            <p id="schedule2" class="schedule">1%</p>
+        </div>
+
+        <div class="small"><center>HTML</center></div>      
+        <div class="array_item">
+            <progress id="file3" class="file" max="100" value="1"></progress>
+            <p id="schedule3" class="schedule">1%</p>
+        </div>
+        <script>
+            window.onload = function() {
+                move1();
+                move2();
+                move3();
+            }
+            
+            function move1() {
+                var ans = document.getElementById("file1");
+                var value = 1;
+                var num = document.getElementById("schedule1");
+                var id = setInterval(frame, 40);
+                function frame() {
+                    if (value >= 70) {
+                        clearInterval(id);
+                    }
+                    else {
+                        value++;
+                        ans.value = value;
+                        num.innerHTML = value + "%";
+                    }
+                }
+            }
+            
+            function move2() {
+                var ans = document.getElementById("file2");
+                var value = 1;
+                var num = document.getElementById("schedule2");
+                var id = setInterval(frame, 40);
+                function frame() {
+                    if (value >= 80) {
+                        clearInterval(id);
+                    }
+                    else {
+                        value++;
+                        ans.value = value;
+                        num.innerHTML = value + "%";
+                    }
+                }
+            }
+            
+            function move3() {
+                var ans = document.getElementById("file3");
+                var value = 1;
+                var num = document.getElementById("schedule3");
+                var id = setInterval(frame, 40);
+                function frame() {
+                    if (value >= 55) {
+                        clearInterval(id);
+                    }
+                    else {
+                        value++;
+                        ans.value = value;
+                        num.innerHTML = value + "%";
+                    }
+                }
+            }
+        </script>
+    </section>
+
+    <section class="card1" id="section-3">
+        <span class="big">個人經歷</span>
+        <span class="mini">&ensp;點擊標題可展開細項&ensp;</span><img class="img3" src="image/rocket.png">
+        <div class="details-wrapper">
+            <details class="small">
+                <summary>大一上管理學-再用就好 木匠的家 牛仔布再生</summary><br>
+                <span class="mini">
+                    <img class="img2" src="image/experience1.png">
+                    &emsp;&emsp;我們深入了解了木匠的家整個運作模式，看到大型關懷弱勢社會團體在運作上的難處和困境，也幫助他們整理再生布料、拍宣傳影片，木匠的家用他們的力量永續這個團體，每個東西都有他的價值，儘管很微小，只要在對的位置就能發光！
+                </span>
+                </div>
+            </details>
+        </div><br></br>
+
+        <div class="details-wrapper">
+            <details class="small">
+                <summary>大一下企業概論-閃甸十一人</summary><br>
+                <span class="mini">
+                    <img class="img2" src="image/experience2.png">
+                    &emsp;&emsp;與緬甸華文教育服務團合作，成立閃甸十一人團隊並設計銷售專案，疫情期間無法進行實體銷售，也激發了我們的想法，在電商化的時代找到網紅作家推出團購，最終達到了兩萬多塊的銷售額目標。
+                </span>
+                </div>
+            </details>
+        </div><br></br>
+
+        <div class="details-wrapper">
+            <details class="small">
+                <summary>大二上網路程式設計-Perfumemory 香見恨晚</summary><br>
+                <span class="mini">
+                    <img class="img2" src="image/experience3.png">
+                    &emsp;&emsp;以後端角色和隔壁班做一個電商網站，將Perfume及memory結合，希望瀏覽者可以從我們主要商品香水中更加了解，找到自我，並留下美好回憶，即使過程中充滿挑戰，還是富有毅力地完成了!
+                </span>
+                </div>
+            </details>
+        </div><br></br>
+
+        <hr>
+        <div class="big">社團經歷</div>
+        <div class="details-wrapper">
+            <details class="small">
+                <summary>桃竹苗校友會 美宣</summary><br>
+                <span class="mini">
+                    <img class="img2" src="image/experience4.jpg">
+                    返鄉服務營隊<br>
+                    &emsp;&emsp;在雲林僑真小學舉辦為期三天的寒假營隊計畫，團隊從聯繫學校到招工到落幕，很開心能讓50位三到五年級的孩子在寒假脫離教科書，體驗一些有趣的實作課程，過程中我也了解到辦一個活動需要的前置作業，擁有了非常多可貴的經驗。
+                </span>
+                </div>
+            </details>
+        </div><br></br>
+    </section>
+
+    <section class="card2" id="section-4">
+        <div>
+            <div class="big">聯絡方式
+            <a href="mailto:ting753852@gmail.com" target="_blank"><img class="img4" src="image/gm.png" style="display: inline;" alt="gm"></a>
+            <a href="https://instagram.com/kayzzi_?igshid=YmMyMTA2M2Y=" target="_blank"><img class="img4" src="image/ig.png" style="display: inline;" alt="ig"></a>
+            <a href="https://www.facebook.com/tingting.huang.9822?mibextid=LQQJ4d" target="_blank"><img class="img4" src="image/fb.png" style="display: inline;" alt="fb"></a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank"><img class="img5" src="image/alien.png" style="display: inline;" alt="uu"></a>
+            
+            </div>
+            <form method="post" action="mailto:ting753852@gmail.com" enctype="text/plain">
+            <textarea id="text-area" name="content" rows="5" cols="100%" wrap="hard"></textarea>
+            <input type="submit" value="內容將傳至本人電子信箱">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>@ 2023 KAYLIE All rights reserved.<img class="img6" src="image/ufo.png"></p>
+    </footer>
+
+<!-- 側邊欄-->
+    <div class="sidebar-image"></div>
+    <div class="sidebar">
+        <ul class="sidebar-list">
+        <li><a href="#section-1">基本資訊</a></li>
+        <li><a href="#section-2">專業技能</a></li>
+        <li><a href="#section-3">個人經歷</a></li>
+        <li><a href="#section-4">聯絡方式</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
